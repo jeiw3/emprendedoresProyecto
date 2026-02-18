@@ -82,7 +82,7 @@ z-index:100;
 }
 
 .navbar .nav-link{color:white!important;opacity:.9}
-.navbar .nav-link.active{
+.nav-link:hover{
 border-bottom:2px solid white;
 }
 
@@ -178,9 +178,9 @@ z-index:2;
 <label class="fw-semibold text-dark mb-1">Filtrar por zona:</label>
 <select class="form-select">
 <option>Selecciona una zona</option>
-<option>San José</option>
-<option>Heredia</option>
-<option>Alajuela</option>
+<option>San Pablo</option>
+<option>Santa María</option>
+<option>San Marcos</option>
 </select>
 </div>
 
@@ -198,10 +198,10 @@ z-index:2;
 <div class="container wrapper">
 <div class="row g-4">
 
-<div class="col-md-6 col-lg-4">
-<div class="business-card">
+<div class="col-md-6 col-lg-4" >
+<div class="business-card" >
 <img src="https://picsum.photos/600/400?1">
-<div class="business-overlay"></div>
+<div class="business-overlay" onclick='window.location.href="<?=base_url("/single");?>"'></div>
 <div class="business-content">
 <h5>Café Aroma & Sabor</h5>
 <p class="small">Cafetería acogedora con café artesanal.</p>
@@ -213,7 +213,7 @@ z-index:2;
 <div class="col-md-6 col-lg-4">
 <div class="business-card">
 <img src="https://picsum.photos/600/400?2">
-<div class="business-overlay"></div>
+<div class="business-overlay" onclick='window.location.href="<?=base_url("/single");?>"'></div>
 <div class="business-content">
 <h5>EcoModa Boutique</h5>
 <p class="small">Moda sostenible hecha localmente.</p>
@@ -225,7 +225,7 @@ z-index:2;
 <div class="col-md-6 col-lg-4">
 <div class="business-card">
 <img src="https://picsum.photos/600/400?3">
-<div class="business-overlay"></div>
+<div class="business-overlay" onclick='window.location.href="<?=base_url("/single");?>"'></div>
 <div class="business-content">
 <h5>TechFix Solutions</h5>
 <p class="small">Reparación de celulares y laptops.</p>

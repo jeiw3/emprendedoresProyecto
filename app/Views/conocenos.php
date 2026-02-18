@@ -18,6 +18,13 @@ z-index:100;
 .navbar .nav-link.active{
 border-bottom:2px solid white;
 }
+.btn-cta{
+background:linear-gradient(135deg,#ff9a4d,#ff6a2b);
+border:none;
+color:white;
+border-radius:9px;
+padding:8px 14px;
+}
 /* HERO */
 
 .hero-about{
