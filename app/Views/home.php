@@ -41,13 +41,19 @@ box-shadow:0 15px 40px rgba(0,0,0,.2);
 height:220px;
 object-fit:cover;
 width:100%;
+ transition: transform 0.3s ease; /* Suaviza el cambio */
+}
+.business-card:hover{
+    transform:scale(1.05);
 }
 
 .business-overlay{
+cursor: pointer;
 position:absolute;
 inset:0;
 background:linear-gradient(to top,rgba(0,0,0,.85),rgba(0,0,0,.3),transparent);
 }
+
 
 .business-content{
 position:absolute;
