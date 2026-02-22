@@ -25,12 +25,10 @@ class Home extends BaseController
          'zonasFiltro'=>$zonasFiltro
         ];
         
-
-      
-
         return view('layout/header').
         view('layout/nav').
         view('home',$data). 
+
         view('layout/footer');
     }
 
@@ -67,5 +65,15 @@ class Home extends BaseController
         view('layout/nav').
         view('conocenos'). 
         view('layout/footer');  
+    }
+
+    public  function filtrosHome($zona){
+        // traemos los emprendimientos segun la zona que elijan
+        $empmodel=new EmprendimientosModel;
+        $emprendimientos = $empmodel ->select('id,nombre,slogan,categoria,nomcarpeta')->where('zona',$zona)->findAll();
+        $data=[
+            'emprendimientos'=>$emprendimientos,
+        ];
+        return view('partials/listemps',$data);
     }
 }
