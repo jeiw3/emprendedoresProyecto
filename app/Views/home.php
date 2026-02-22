@@ -178,9 +178,9 @@ z-index:2;
 <label class="fw-semibold text-dark mb-1">Filtrar por zona:</label>
 <select class="form-select">
 <option>Selecciona una zona</option>
-<option>San Pablo</option>
-<option>Santa María</option>
-<option>San Marcos</option>
+<?php foreach($zonasFiltro as $zf): ?>
+<option value="<?= $zf->zona ?>"><?= $zf->zona?></option>
+<?php endforeach;?>
 </select>
 </div>
 
@@ -196,43 +196,26 @@ z-index:2;
 
 <!-- GRID -->
 <div class="container wrapper">
-<div class="row g-4">
+    <div class="row g-4">
 
-<div class="col-md-6 col-lg-4" >
-<div class="business-card" >
-<img src="https://picsum.photos/600/400?1">
-<div class="business-overlay" onclick='window.location.href="<?=base_url("/single");?>"'></div>
-<div class="business-content">
-<h5>Café Aroma & Sabor</h5>
-<p class="small">Cafetería acogedora con café artesanal.</p>
-<span class="badge-custom gastro">Gastronomía</span>
-</div>
-</div>
-</div>
 
-<div class="col-md-6 col-lg-4">
-<div class="business-card">
-<img src="https://picsum.photos/600/400?2">
-<div class="business-overlay" onclick='window.location.href="<?=base_url("/single");?>"'></div>
-<div class="business-content">
-<h5>EcoModa Boutique</h5>
-<p class="small">Moda sostenible hecha localmente.</p>
-<span class="badge-custom moda">Moda</span>
-</div>
-</div>
-</div>
+<!-- aqui insertamos los emprendimientos traidos -->
+ <?php
+    foreach($emprendimientos as $emp):
+ ?>
 
-<div class="col-md-6 col-lg-4">
-<div class="business-card">
-<img src="https://picsum.photos/600/400?3">
-<div class="business-overlay" onclick='window.location.href="<?=base_url("/single");?>"'></div>
-<div class="business-content">
-<h5>TechFix Solutions</h5>
-<p class="small">Reparación de celulares y laptops.</p>
-<span class="badge-custom tech">Tecnología</span>
-</div>
-</div>
-</div>
+        <div class="col-md-6 col-lg-4">
+            <div class="business-card">
+                <img src="../public/uploads/<?= $emp->nomcarpeta?>/logo.jpg">
+                <div class="business-overlay" onclick='window.location.href="<?=base_url("/single/$emp->id");?>"'></div>
+                <div class="business-content">
+                    <h5><?= $emp->nombre?></h5>
+                    <p class="small"><?= $emp->slogan?></p>
+                    <span class="badge-custom tech"><?= $emp->categoria?></span>
+                </div>
+            </div>
+        </div>
+<?php endforeach; ?>
 
 </div>
 </div>

@@ -25,7 +25,7 @@ padding:8px 14px;
 /* HERO */
 .single-hero{
 background:linear-gradient(rgba(15,23,42,.75),rgba(15,23,42,.75)),
-url("https://picsum.photos/1400/700?business") center/cover;
+url("../uploads/<?= $emprendimientos->nomcarpeta;?>/portada.jpg") center/cover;
 color:white;
 padding:160px 0 120px;
 position:relative;
@@ -65,6 +65,9 @@ border-top:1px solid #e5e7eb;
 color:#6b7280;
 font-size:14px;
 }
+img.img-fluid{
+    height:200px;
+}
 </style>
 </head>
 <body>
@@ -74,9 +77,9 @@ font-size:14px;
 <!-- HERO -->
 <section class="single-hero text-center text-lg-start">
 <div class="container">
-<span class="badge-cat gastro">Gastronomía</span>
-<h1 class="display-5 mt-3">Café Aroma & Sabor</h1>
-<p class="opacity-75 col-lg-6">Cafetería acogedora con café artesanal, repostería fresca y ambiente familiar.</p>
+<span class="badge-cat gastro"><?= $emprendimientos->categoria;?></span>
+<h1 class="display-5 mt-3"><?= $emprendimientos->nombre;?></h1>
+<p class="opacity-75 col-lg-6"><?= $emprendimientos->slogan;?></p>
 </div>
 </section>
 
@@ -90,23 +93,23 @@ font-size:14px;
 
 <h4 class="section-title">Descripción</h4>
 <p>
-Somos una cafetería local dedicada a ofrecer café de especialidad, postres artesanales
- y un espacio cómodo para trabajar o compartir.
+<?= $emprendimientos->descripcion;?>
 </p>
 
 <h4 class="section-title mt-4">Servicios</h4>
 <ul>
-<li>Café de especialidad</li>
-<li>Repostería artesanal</li>
-<li>WiFi gratuito</li>
-<li>Pedidos para llevar</li>
+<?php foreach($serviciosemp as $semp):?>
+<li><?= $semp->servicio?></li>
+<?php endforeach;?>
 </ul>
 
 <h4 class="section-title mt-4">Galería</h4>
 <div class="row g-3">
-<div class="col-6 col-md-4"><img class="img-fluid rounded" src="https://picsum.photos/300/200?1"></div>
-<div class="col-6 col-md-4"><img class="img-fluid rounded" src="https://picsum.photos/300/200?2"></div>
-<div class="col-6 col-md-4"><img class="img-fluid rounded" src="https://picsum.photos/300/200?3"></div>
+<div class="col-6 col-md-4"><img class="img-fluid rounded" src="../uploads/<?=$emprendimientos->nomcarpeta?>/img1.jpg"></div>
+<div class="col-6 col-md-4"><img class="img-fluid rounded" src="../uploads/<?=$emprendimientos->nomcarpeta?>/img2.jpg"></div>
+<div class="col-6 col-md-4"><img class="img-fluid rounded" src="../uploads/<?=$emprendimientos->nomcarpeta?>/img3.jpg"></div>
+<div class="col-6 col-md-4"><img class="img-fluid rounded" src="../uploads/<?=$emprendimientos->nomcarpeta?>/img4.jpg"></div>
+<div class="col-6 col-md-4"><img class="img-fluid rounded" src="../uploads/<?=$emprendimientos->nomcarpeta?>/img5.jpg"></div>
 </div>
 
 </div>
@@ -117,15 +120,16 @@ Somos una cafetería local dedicada a ofrecer café de especialidad, postres art
 <div class="contact-box">
 <h5 class="fw-semibold mb-3">Información</h5>
 
-<p class="mb-2"><strong>📍 Zona:</strong> San José Centro</p>
-<p class="mb-2"><strong>📞 Teléfono:</strong> 8888-8888</p>
-<p class="mb-2"><strong>🕒 Horario:</strong> 7:00am - 7:00pm</p>
+<p class="mb-2"><strong>📍 Zona:</strong> <?= $emprendimientos->zona?></p>
+<p class="mb-2"><strong>📞 Teléfono:</strong> <?= $emprendimientos->telefono?></p>
+<p class="mb-2"><strong>🕒 Horario:</strong> <?= $emprendimientos->horario?></p>
 
 <hr>
 
 <div class="d-grid gap-2">
-<button class="btn btn-main">Contactar</button>
-<button class="btn btn-outline-dark">Ver ubicación</button>
+<a href="https://wa.me/506<?=$emprendimientos->telefono?>?text=Hola%20vi%20tu%20emprendimiento%20en%20la%20plataforma
+" class="btn btn-main">Contactar al whatsapp </a>
+<button class="btn btn-outline-dark">Ver ubicación google maps</button>
 </div>
 </div>
 
