@@ -145,28 +145,34 @@ Este es un proyecto comunitario para apoyar los emprendimientos locales.
 <!-- STEPS BELOW -->
 <div class="row g-4">
 
+
+
 <div class="col-md-6">
 <div class="card step-card p-4 h-100">
 <div class="icon-circle">1</div>
-<h5>Contacta al administrador</h5>
-<p>Haz clic en el botón para comunicarte con el administrador del sitio y solicitar la publicación de tu negocio.</p>
-<a href="https://wa.me/50600000000" class="btn btn-whatsapp mt-2">Contactar administrador</a>
+<h5>Prepara la información necesaria</h5>
+<p>Ten listos los siguientes elementos de tu emprendimiento antes de contactarnos:</p>
+<ul class="req-list">
+<li>✔ Logo</li>
+<li>✔ Slogan y descripción</li>
+<li>✔ Foto de portada (productos e imagen del dueño)</li>
+<li>✔ Fotos de trabajos recientes</li>
+<li>✔ Ubicación: San Marcos, San Lorenzo o San Pablo</li>
+<li>✔ Número de teléfono de contacto</li>
+<li>✔ Horario</li>
+<li>✔ Servicios que ofrece (express,wifi,parqueo)</li>
+<li>✔ Dirección exacta para integración con google maps(opcional)</li>
+
+</ul>
 </div>
 </div>
 
 <div class="col-md-6">
 <div class="card step-card p-4 h-100">
 <div class="icon-circle">2</div>
-<h5>Prepara la información necesaria</h5>
-<p>Ten listos los siguientes elementos antes de contactarnos:</p>
-<ul class="req-list">
-<li>✔ Logo del emprendimiento</li>
-<li>✔ Nombre de los dueños</li>
-<li>✔ Foto de portada (productos e imagen del dueño)</li>
-<li>✔ Fotos de trabajos recientes</li>
-<li>✔ Ubicación: San Marcos, San Lorenzo o San Pablo</li>
-<li>✔ Número de teléfono de contacto</li>
-</ul>
+<h5>Contacta al administrador</h5>
+<p>Haz clic en el botón para comunicarte con el administrador del sitio y solicitar la publicación de tu negocio.</p>
+<a href="https://wa.me/50672302495?text=Hola%20me%20gustaria%20formar%20parte%20de%20la%20plataforma" class="btn btn-whatsapp mt-2">Contactar administrador</a>
 </div>
 </div>
 
